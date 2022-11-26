@@ -16,7 +16,7 @@ jobs:
       env:
         SCANNER_TOKEN: ${{ secrets.SCANNER_TOKEN }}
       run: |-
-        curl http://scanner.matdoes.dev/ips?t="$SCANNER_TOKEN" > ips
+        curl http://scanner.matdoes.dev/ips?t=${{ secrets.SCANNER_TOKEN }} > ips
     - name: Commit and push if it changed
       run: |-
         git config user.name "bot"
