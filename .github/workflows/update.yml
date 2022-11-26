@@ -13,8 +13,6 @@ jobs:
     - name: Check out this repo
       uses: actions/checkout@v2
     - name: Update
-      env:
-        SCANNER_TOKEN: ${{ secrets.SCANNER_TOKEN }}
       run: |-
         curl https://scanner.matdoes.dev/ips?t=${{ secrets.SCANNER_TOKEN }} > ips
     - name: Commit and push if it changed
