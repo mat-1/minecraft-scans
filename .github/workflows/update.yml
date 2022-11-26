@@ -1,7 +1,6 @@
 name: Update IP list
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron:  '0 0 * * *'
